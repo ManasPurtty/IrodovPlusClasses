@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "name":"Manas Purtty",
+        "title":"NIT Rourkela",
+        "description":"Computer Science",
+        "image":"/Nitphoto/manas.jpg"
+    },
+     {
+        "id":1,
+        "name":"Sunirmal Sibananda",
+        "title":"NIT Rourkela",
+        "description":"Int. Msc Mathematics",
+        "image":"/Nitphoto/sunirmal.jpg"
+    },
+  {
+        "id":1,
+        "name":"Pratik Mohanta",
+        "title":"NIT Rourkela",
+        "description":"Electronics & Instrumentation",
+        "image":"/Nitphoto/pratik.jpg"
+    },
+      {
+        "id":1,
+        "name":"Abhijit Mohakud",
+        "title":"NIT Rourkela",
+        "description":"Int. Msc Lifescience",
+        "image":"/Nitphoto/abhijit.jpg"
+    },
+      {
+        "id":1,
+        "name":"Suguda Thakur Marndi",
+        "title":"NIT Rourkela",
+        "description":"Computer Science",
+        "image":"/Nitphoto/suguda.jpg"
+    }
+
+]

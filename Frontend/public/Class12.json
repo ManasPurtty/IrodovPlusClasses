@@ -1,0 +1,34 @@
+[
+    {
+        "id":1,
+        
+        "image":"/Class12/1.jpg"
+    },
+     {
+        "id":2,
+       
+        "image":"/Class12/2.jpg"
+    },
+  {
+        "id":3,
+        
+     
+        "image":"/Class12/3.jpg"
+    },
+      {
+        "id":4,
+        
+    
+        "image":"/Class12/4.jpg"
+    },
+      {
+        "id":5,
+      
+        "image":"/Class12/5.jpg"
+    }, {
+        "id":6,
+      
+        "image":"/Class12/6.jpg"
+    }
+
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "id":1,
+        
+        "image":"/Ojeephoto/1.jpg"
+    },
+     {
+        "id":2,
+       
+        "image":"/Ojeephoto/2.jpg"
+    },
+  {
+        "id":3,
+        
+     
+        "image":"/Ojeephoto/2.jpg"
+    },
+      {
+        "id":4,
+        
+    
+        "image":"/Ojeephoto/4.jpg"
+    },
+      {
+        "id":5,
+      
+        "image":"/Ojeephoto/5.jpg"
+    }, {
+        "id":6,
+      
+        "image":"/Ojeephoto/6.jpg"
+    }
+
+]
