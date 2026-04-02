@@ -16,7 +16,7 @@ function Enroll() {
     formData.append("image", data.Image[0]);
 
     try {
-      await axios.post("http://localhost:3000/api/enroll", formData, {
+      await axios.post("https://irodovbackend.onrender.com/enroll", formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
       alert("Enrollment successful");
