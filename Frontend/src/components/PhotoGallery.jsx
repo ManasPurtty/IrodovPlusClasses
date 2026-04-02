@@ -1,10 +1,11 @@
+ const API_URL = import.meta.env.VITE_API_URL;
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function PhotoGallery() {
   const [images, setImages] = useState([]);
 
- const API_URL = import.meta.env.VITE_API_URL;
+
 
 useEffect(() => {
   axios.get(`${API_URL}/images`, {
