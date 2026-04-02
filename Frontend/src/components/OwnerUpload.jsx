@@ -11,7 +11,7 @@ function OwnerUpload() {
     formData.append("image", data.image[0]);
 
     try {
-      await axios.post("http://localhost:3000/upload", formData);
+      await axios.post("https://irodovbackend.onrender.com/upload", formData);
       alert("Uploaded successfully!");
     } catch (err) {
       console.error(err);
