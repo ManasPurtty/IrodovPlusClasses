@@ -3,7 +3,7 @@ import { useForm} from "react-hook-form"
 import {Link} from "react-router-dom"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+const API_URL = import.meta.env.VITE_API_URL;
 function Login() {
   const navigate = useNavigate();
 
@@ -14,10 +14,16 @@ function Login() {
     formState: { errors },
   } = useForm();
   const onSubmit=(data)=>{
-    axios.post('http://localhost:3000/owners/login',{
-      email:data.email,
-      password:data.password
-    })
+    axios.post(
+    `${API_URL}/owners/login`,
+    {
+      email: data.email,
+      password: data.password
+    },
+    {
+      withCredentials: true
+    }
+  )
     .then(result=>{
       console.log(result)
       if(result.data==="Success"){
