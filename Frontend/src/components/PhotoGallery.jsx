@@ -4,11 +4,15 @@ import axios from "axios";
 function PhotoGallery() {
   const [images, setImages] = useState([]);
 
-  useEffect(() => {
-    axios.get("http://localhost:3000/images")
-      .then(res => setImages(res.data))
-      .catch(err => console.log(err));
-  }, []);
+ const API_URL = import.meta.env.VITE_API_URL;
+
+useEffect(() => {
+  axios.get(`${API_URL}/images`, {
+    withCredentials: true
+  })
+    .then(res => setImages(res.data))
+    .catch(err => console.log(err));
+}, []);
 
   return (
     <>
