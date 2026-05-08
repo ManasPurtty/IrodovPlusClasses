@@ -1,2 +1,2 @@
 # IrodovPlusClasses
-live website - https://irodovplusclasses.in/
+live website - https://irodovplusclasses.onrender.com/
