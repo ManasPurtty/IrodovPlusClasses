@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 import axios from "axios"
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../utils/api';
 function Enroll() {
   const navigate=useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -17,7 +18,7 @@ function Enroll() {
     formData.append("image", data.Image[0]);
 
     try {
-      await axios.post("https://irodovbackend.onrender.com/api/enroll", formData, {
+      await axios.post(`${API_BASE_URL}/api/enroll`, formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
       navigate("/success");

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Login from './Login';
 
 function Navbar() {
@@ -46,12 +47,12 @@ function Navbar() {
 
   const navitems = (
     <>
-      <li><a href="/">Home</a></li>
-      <li><a href="/resources">Study Material</a></li>
-      <li><a href="/result">Result</a></li>
-      <li><a href="/enroll">Enroll</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/about">About us</a></li>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/resources">Study Material</Link></li>
+      <li><Link to="/result">Result</Link></li>
+      <li><Link to="/enroll">Enroll</Link></li>
+      <li><Link to="/contact">Contact</Link></li>
+      <li><Link to="/about">About us</Link></li>
     </>
   );
 
@@ -87,10 +88,10 @@ function Navbar() {
               {navitems}
             </ul>
           </div>
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img className="w-8 sm:w-10 mr-2" src="/logo.png" alt="Irodov logo" />
             <span className="text-sm sm:text-xl sm:font-bold tracking-tight">Irodov + Classes</span>
-          </a>
+          </Link>
         </div>
 
         <div className="navbar-center hidden lg:flex">
