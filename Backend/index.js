@@ -14,16 +14,36 @@ require("dotenv").config();
 // Database connection
 require('./config/mongoose-connect');
 
-app.use(cors());
 
-dotenv.config();
+
 
 
 
 // Routers
 const ownerRouter = require('./Route/ownerRouter');
+const studentRouter = require('./Route/studentRouter');
+const resourceRouter = require('./Route/resourceRouter');
 
-const db=require("./config/mongoose-connect");
+const allowedOrigins = [
+  'https://irodovplusclasses.in',
+  'http://localhost:5173',
+  'http://localhost:3000',
+  'http://127.0.0.1:5173'
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps, curl, postman)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+      return callback(null, true);
+    }
+    return callback(null, true);
+  },
+  credentials: true
+}));
+
+
 
 // Middleware setup
 app.use(express.json()); // Required for JSON body parsing
@@ -32,15 +52,14 @@ app.use(cookieParser());
 
 
 
-
+app.get("/",(req,res)=>{
+  res.send("welcome");
+})
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set("view engine", "ejs");
 
-app.use(cors({
-  origin: 'http://localhost:5173', // or '*' for all origins (not recommended for production)
-  credentials: true // if you use cookies
-}));
+
 
 // Routes
 
@@ -82,12 +101,14 @@ app.get("/images", async (req, res) => {
 
 
 
-//
+// API Routes
 app.use("/api/enroll", enrollRoutes);
-
-
+app.use("/api/students", studentRouter);
+app.use("/api/resources", resourceRouter);
 
 // Server start
-app.listen(3000, () => {
-    console.log("Server is running on http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
+

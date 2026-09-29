@@ -6,7 +6,7 @@ const ViewEnrollments = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/enroll")
+      .get("https://irodovbackend.onrender.com/api/enroll")
       .then((res) => setData(res.data))
       .catch((err) => console.error("Failed to fetch:", err));
   }, []);

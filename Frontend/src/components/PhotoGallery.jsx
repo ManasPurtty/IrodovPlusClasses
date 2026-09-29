@@ -5,16 +5,16 @@ function PhotoGallery() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/images")
+    axios.get("https://irodovbackend.onrender.com/images")
       .then(res => setImages(res.data))
       .catch(err => console.log(err));
   }, []);
 
   return (
     <>
-    <div className="mt-20   sm:mx-20 ">
+    <div className="mt-20   sm:mx-10 ">
         <h1 className="text-bold text-center text-3xl">Photo Gallery</h1>
-        <div className="flex flex-wrap gap-4 mx-10 sm:p-4 ">
+        <div className="flex flex-wrap gap-4  sm:p-4 ">
       {images.map((img, index) => (
         <div key={index}>
           
@@ -26,7 +26,7 @@ function PhotoGallery() {
               )
             )}`}
             alt={img.name}
-            className=" w-50 h-50 object-cover border rounded"
+            className=" w-35 h-35 sm:w-50 sm:h-50 object-cover border rounded"
           />
         </div>
       ))}

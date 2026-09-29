@@ -18,7 +18,7 @@ export default function SliderPage() {
   }, []);
 
   return (
-    <div className="w-full  overflow-hidden  ">
+    <div className="w-full    ">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -26,7 +26,7 @@ export default function SliderPage() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
-          className="w-full h-full" // Removed 'absolute'
+          className="w-full " // Removed 'absolute'
         >
           {slides[index]}
         </motion.div>

@@ -5,10 +5,11 @@ function Footer() {
     <div className='mt-10'>
       <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
   <nav className="grid grid-flow-col gap-4">
+    <a href='/resources' className="link link-hover">Study Material</a>
+    <a href='/result' className="link link-hover">Result</a>
+    <a href='/enroll' className="link link-hover">Enroll</a>
     <a href='/about' className="link link-hover">About us</a>
     <a href='/contact'  className="link link-hover">Contact</a>
-    <a href='/result' className="link link-hover">Result</a>
-    <a href='/enroll' className="link link-hover">Enrolll</a>
   </nav>
   <nav>
     <div className="grid grid-flow-col gap-4">

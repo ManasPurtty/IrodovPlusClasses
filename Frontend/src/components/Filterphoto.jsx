@@ -5,7 +5,7 @@ function Filterphoto() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/images")
+    axios.get("https://irodovbackend.onrender.com/images")
       .then(res => setImages(res.data))
       .catch(err => console.log(err));
   }, []);

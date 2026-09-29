@@ -1,8 +1,9 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
 import axios from "axios"
-
+import { useNavigate } from 'react-router-dom';
 function Enroll() {
+  const navigate=useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = async (data) => {
@@ -16,10 +17,10 @@ function Enroll() {
     formData.append("image", data.Image[0]);
 
     try {
-      await axios.post("http://localhost:3000/api/enroll", formData, {
+      await axios.post("https://irodovbackend.onrender.com/api/enroll", formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
-      alert("Enrollment successful");
+      navigate("/success");
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Submission failed");
