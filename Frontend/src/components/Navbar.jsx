@@ -50,7 +50,7 @@ function Navbar() {
       <li><Link to="/">Home</Link></li>
       <li><Link to="/resources">Study Material</Link></li>
       <li><Link to="/result">Result</Link></li>
-      <li><Link to="/enroll">Enroll</Link></li>
+      {student && <li><Link to="/enroll">Enroll</Link></li>}
       <li><Link to="/contact">Contact</Link></li>
       <li><Link to="/about">About us</Link></li>
     </>
